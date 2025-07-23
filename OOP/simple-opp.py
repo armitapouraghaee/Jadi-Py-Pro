@@ -3,5 +3,7 @@ class person:
     def __init__(self,name,age):
         self.name = name
         self.age = age
+    def get_name(self):
+        print('name is %s' %self.name)
 Armita = person ("Armita" , 24)
-print(Armita)
+Armita.get_name()

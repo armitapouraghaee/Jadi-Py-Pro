@@ -7,10 +7,12 @@ class Computer:
     def value(self):
         return self.ram+self.hard+self.cpu
 class Laptop(Computer):
-    pass
+    def value(self):
+        return self.ram+self.hard+self.cpu+self.size
 
 pc1=Computer(12,2,4)
 print(pc1.value())
 
 laptop1 = Laptop(16,2,4)
+laptop1.size = 13
 print(laptop1.value())

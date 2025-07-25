@@ -1,19 +1,48 @@
 class School:
     def __init__(self):
-        self.tedad = int(input('ur tedad '))
-        self.sen = list(map(int, input('ur sen ').split()))
-        self.ghad = list(map(int, input('ur ghad ').split()))
-        self.vazn = list(map(int, input('ur vazn ').split()))
+        self.number = int(input('ur number '))
+        self.age = list(map(int, input('ur age ').split()))
+        self.height = list(map(int, input('ur height ').split()))
+        self.weight = list(map(int, input('ur weight ').split()))
     def average_age(self,):
-        return sum(self.sen) / self.tedad
+        return float(sum(self.age) / self.number)
 
     def average_height(self):
-        # محاسبه میانگین قد
-        return sum(self.ghad) / self.tedad
+        return float(sum(self.height) / self.number)
 
     def average_weight(self):
-        return sum(self.vazn) / self.tedad
-school = School()
+        return float(sum(self.weight) / self.number)
+    
+'''school = School()
 print(school.average_age())
 print(school.average_height())
-print(school.average_weight())
+print(school.average_weight())'''
+
+class A(School):
+    pass
+class B(School):
+    pass
+
+
+a = A()
+b = B()
+
+print(a.average_age())
+print(a.average_height())
+print(a.average_weight())
+
+print(b.average_age())
+print(b.average_height())
+print(b.average_weight())
+
+if a.average_height() > b.average_height():
+    print("A")
+elif a.average_height() < b.average_height():
+    print("B")
+else:
+    if a.average_weight() < b.average_weight():
+        print("A")
+    elif a.average_weight() > b.average_weight():
+        print("B")
+    else:
+        print("Same")

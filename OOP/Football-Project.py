@@ -17,5 +17,11 @@ random.shuffle(players)
 team_A = players[:11]    # 11 نفر اول تیم A
 team_B = players[11:]    # 11 نفر دوم تیم B
 
-print("Team A:", team_A)
-print("Team B:", team_B)
+'''print("Team A:", team_A)
+print("Team B:", team_B)'''
+
+for everyplayer in team_A:
+    print(everyplayer ,'A')
+
+for everyplayer in team_B:
+    print(everyplayer ,'B')

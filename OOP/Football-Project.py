@@ -12,3 +12,10 @@ players= []
 for name in names:
     player = Footballer(name)
     players.append(player)
+
+random.shuffle(players)
+team_A = players[:11]    # 11 نفر اول تیم A
+team_B = players[11:]    # 11 نفر دوم تیم B
+
+print("Team A:", team_A)
+print("Team B:", team_B)
